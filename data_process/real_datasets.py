@@ -1,6 +1,8 @@
 import pickle
 from numpy.core.numeric import argwhere
-from numpy.lib.financial import rate
+# from numpy.lib.financial import rate
+import numpy_financial as npf
+
 import torch
 import numpy as np
 import cv2

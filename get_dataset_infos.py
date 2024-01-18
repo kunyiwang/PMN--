@@ -49,7 +49,7 @@ def get_SID_info(info_dir='info', root_dir='/data/SID/Sony', mode='train'):
     for i in pbar:
         path = os.path.join(root_dir, names[i])
         info = get_basic_info(path)
-        info['ratio'] = np.zeros(len(paths_short[i]), dtype=np.int)
+        info['ratio'] = np.zeros(len(paths_short[i]), dtype=int)
         for k in range(len(paths_short[i])):
             info_short = get_basic_info(paths_short[i][k])
             info['ratio'][k] = int(info['ExposureTime']/info_short['ExposureTime'])
@@ -141,7 +141,7 @@ if __name__ == "__main__":
     elif args.dstname == 'SID':
         if args.mode == 'evaltest':
             infos = get_SID_info_from_txt(info_dir=args.info_dir, root_dir=args.root_dir)
-        else:
+        else: # args.mode == 'train'
             infos = get_SID_info(info_dir=args.info_dir, root_dir=args.root_dir, mode=args.mode)
     print('Info Example:', infos[0])
     print()
