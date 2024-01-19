@@ -46,6 +46,7 @@ class Base_Trainer():
         parser = BaseParser()
         self.parser = parser.parse()
         with open(self.parser.runfile, 'r', encoding="utf-8") as f:
+            print(self.parser.save_plot)
             self.args = yaml.load(f.read(), Loader=yaml.FullLoader)
         self.mode = self.args['mode'] if self.parser.mode is None else self.parser.mode
         self.save_plot = self.parser.save_plot

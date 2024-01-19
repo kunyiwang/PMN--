@@ -31,17 +31,17 @@ def get_SID_info(info_dir='info', root_dir='/data/SID/Sony', mode='train'):
     if 'eval' in mode: head.append('1')
     if 'test' in mode: head.append('2')
 
-    names = sorted([name for name in os.listdir(root_dir) if name[0] in head])
+    names = sorted([name for name in os.listdir(root_dir) if name[0] in head]) # names_long
     names_short = [name for name in sorted(os.listdir(root_dir.replace('long', 'short'))) if name[0] in head]
     paths_short = []
     paths = [os.path.join(root_dir.replace('long', 'short'), names_short[0])]
     for i in range(1, len(names_short)):
         if names_short[i-1][:5] == names_short[i][:5]:
-            paths.append(os.path.join(root_dir.replace('long', 'short'), names_short[i]))
+            paths.append(os.path.join(root_dir.replace('long', 'short'), names_short[i])) # check prefix consistency: 00001/00002...
         else:
-            paths_short.append(paths)
+            paths_short.append(paths) # a list of lists(paths: a list of string with same prefix)
             paths = []
-    paths_short.append(paths)
+    paths_short.append(paths) # in total 100 lists
         
     pbar = tqdm(range(len(names)))
     infos = []
