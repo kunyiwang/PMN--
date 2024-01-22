@@ -6,6 +6,16 @@ from archs import *
 from losses import *
 from pathlib import Path
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+    
 class BaseParser():
     def __init__(self):
         self.parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -13,7 +23,7 @@ class BaseParser():
     def parse(self):
         self.parser.add_argument('--runfile', '-f', default="runfiles/Ours.yml", type=Path, help="path to config")
         self.parser.add_argument('--mode', '-m', default=None, type=str, help="train or test")
-        self.parser.add_argument('--save_plot', '-s', default=True, type=bool, help="save or not")
+        self.parser.add_argument('--save_plot', '-s', default=True, type=str2bool, help="save or not")
         self.parser.add_argument('--debug', '-d', default=False, type=bool, help="debug or not")
 
         return self.parser.parse_args()

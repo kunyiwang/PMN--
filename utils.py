@@ -509,7 +509,7 @@ def quality_assess(X, Y, data_range=255):
     # Y: correct; X: estimate
     if X.ndim == 3:
         psnr = compare_psnr(Y, X, data_range=data_range)
-        ssim = compare_ssim(Y, X, data_range=data_range, multichannel=True)
+        ssim = compare_ssim(Y, X, data_range=data_range, multichannel=True, win_size=3)
         return {'PSNR':psnr, 'SSIM': ssim}
     else:
         raise NotImplementedError

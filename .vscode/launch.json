@@ -1,0 +1,110 @@
+// 1. Use get_dataset_infos.py to Generate Dataset Infos
+//
+
+// Evaluate ELD Dataset
+// python3 get_dataset_infos.py --dstname ELD --root_dir /data/ELD --mode SonyA7S2
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Python: Debug ELD Parser",
+//             "type": "python",
+//             "request": "launch",
+//             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
+//             "args": [
+//                     "--dstname",
+//                     "ELD",
+//                     "--root_dir",
+//                     "/home/kunyi/Projects/PMN/data/ELD",
+//                     "--mode",
+//                     "SonyA7S2"
+//                 ],
+//             "program": "/home/kunyi/Projects/PMN/get_dataset_infos.py",
+//             "console": "integratedTerminal",
+//             "cwd": "/home/kunyi/Projects/PMN",   // Current Working Directory(cwd)
+//             "justMyCode": true
+//         }
+//     ]
+// }
+
+// Evaluate SID Dataset
+// python3 get_dataset_infos.py --dstname SID --root_dir /data/SID/Sony --mode evaltest
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Python: Debug SID Parser",
+//             "type": "python",
+//             "request": "launch",
+//             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
+//             "args": [
+//                     "--dstname",
+//                     "SID",
+//                     "--root_dir",
+//                     "/home/kunyi/Projects/PMN/data/SID/Sony",
+//                     "--mode",
+//                     "evaltest"
+//                 ],
+//             "program": "/home/kunyi/Projects/PMN/get_dataset_infos.py",
+//             "console": "integratedTerminal",
+//             "cwd": "/home/kunyi/Projects/PMN",   // Current Working Directory(cwd)
+//             "justMyCode": true
+//         }
+//     ]
+// }
+
+// Train
+// python3 get_dataset_infos.py --dstname SID --root_dir /data/SID/Sony --mode train
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "Python: Debug Data Parser",
+//             "type": "python",
+//             "request": "launch",
+//             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
+//             "args": [
+//                     "--dstname",
+//                     "SID",
+//                     "--root_dir",
+//                     "/home/kunyi/Projects/PMN/data/SID/Sony",
+//                     "--mode",
+//                     "train"
+//                 ],
+//             "program": "/home/kunyi/Projects/PMN/get_dataset_infos.py",
+//             "console": "integratedTerminal",
+//             "cwd": "/home/kunyi/Projects/PMN",   // Current Working Directory(cwd)
+//             "justMyCode": true
+//         }
+//     ]
+// }
+ 
+// 2. Evaluate Using Pre-trained Models
+// If you don't want to save pictures, please add '--save_plot False'. 
+// This option will save your time and space.
+//
+
+// Only Using SID Dataset to evaluate
+// python3 trainer_SID.py -f runfiles/Ours.yml --mode test
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Debug Evaluator with SID",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
+            "program": "/home/kunyi/Projects/PMN/trainer_SID.py",
+            "args": [
+                "-f",
+                "/home/kunyi/Projects/PMN/runfiles/Ours.yml",
+                "--mode",
+                "test",
+                "--save_plot",
+                "False"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "/home/kunyi/Projects/PMN"
+        }
+    ]
+}

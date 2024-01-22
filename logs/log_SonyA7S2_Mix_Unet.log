@@ -96,3 +96,63 @@ ssims_lr=0.3286, ssims_dn=0.9434
 2022-04-26 03:44:27 >>  Epoch -1: PSNR=37.22
 psnrs_lr=22.26, psnrs_dn=37.22
 ssims_lr=0.2691, ssims_dn=0.9281
+2024-01-21 06:02:25 >>  SID Datasets: Dgain=100
+Model Name:	SonyA7S2_Mix_Unet
+Architecture:	UNetSeeInDark
+TrainDataset:	Mix_Dataset
+EvalDataset:	ELD_Dataset
+CameraType:	SonyA7S2
+num_channels:	32
+BatchSize:	1
+PatchSize:	512
+LearningRate:	0.0002
+Epoch:		1800
+num_workers:	4
+Command:	augv1.2, idremap, darkshading2
+Let's use 1 GPUs!
+2024-01-21 06:05:17 >>  ELD Datasets: Dgain=100
+2024-01-21 06:06:32 >>  Epoch -1: PSNR=46.50
+psnrs_lr=31.22, psnrs_dn=46.50
+ssims_lr=0.5591, ssims_dn=0.9869
+2024-01-21 06:06:32 >>  ELD Datasets: Dgain=200
+2024-01-21 06:07:46 >>  Epoch -1: PSNR=44.51
+psnrs_lr=26.28, psnrs_dn=44.51
+ssims_lr=0.2843, ssims_dn=0.9733
+Model Name:	SonyA7S2_Mix_Unet
+Architecture:	UNetSeeInDark
+TrainDataset:	Mix_Dataset
+EvalDataset:	ELD_Dataset
+CameraType:	SonyA7S2
+num_channels:	32
+BatchSize:	1
+PatchSize:	512
+LearningRate:	0.0002
+Epoch:		1800
+num_workers:	4
+Command:	augv1.2, idremap, darkshading2
+Let's use 1 GPUs!
+2024-01-21 06:08:23 >>  SID Datasets: Dgain=100
+2024-01-21 06:10:01 >>  Epoch -1: PSNR=43.16
+psnrs_lr=29.35, psnrs_dn=43.16
+ssims_lr=0.6184, ssims_dn=0.9785
+2024-01-21 06:10:01 >>  SID Datasets: Dgain=250
+2024-01-21 06:11:40 >>  Epoch -1: PSNR=40.92
+psnrs_lr=24.00, psnrs_dn=40.92
+ssims_lr=0.4344, ssims_dn=0.9691
+2024-01-21 06:11:40 >>  SID Datasets: Dgain=300
+2024-01-21 06:13:42 >>  Epoch -1: PSNR=37.77
+psnrs_lr=22.48, psnrs_dn=37.77
+ssims_lr=0.3460, ssims_dn=0.9587
+Model Name:	SonyA7S2_Mix_Unet
+Architecture:	UNetSeeInDark
+TrainDataset:	Mix_Dataset
+EvalDataset:	ELD_Dataset
+CameraType:	SonyA7S2
+num_channels:	32
+BatchSize:	1
+PatchSize:	512
+LearningRate:	0.0002
+Epoch:		1800
+num_workers:	4
+Command:	augv1.2, idremap, darkshading2
+Let's use 1 GPUs!

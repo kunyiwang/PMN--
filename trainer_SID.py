@@ -465,6 +465,8 @@ if __name__ == '__main__':
         trainer.mode = 'evaltest'
     # best_model
     best_model_path = os.path.join(f'./checkpoints/{trainer.model_name}_best_model.pth')
+    # log(f'OS PATH:\t{os.path}')
+    # log(f'Current Directory:\t{os.getcwd()}')
     if os.path.exists(best_model_path) is False: 
         best_model_path = os.path.join(f'./checkpoints/{trainer.model_name}_last_model.pth')
     best_model = torch.load(best_model_path, map_location=trainer.device)
