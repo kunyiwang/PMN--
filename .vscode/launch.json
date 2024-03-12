@@ -91,7 +91,7 @@
     "configurations": [
         {
             "name": "Python: Debug Evaluator with SID",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
             "program": "/home/kunyi/Projects/PMN/trainer_SID.py",
