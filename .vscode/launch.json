@@ -8,20 +8,20 @@
 //     "configurations": [
 //         {
 //             "name": "Python: Debug ELD Parser",
-//             "type": "python",
+//             "type": "debugpy",
 //             "request": "launch",
 //             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
 //             "args": [
 //                     "--dstname",
 //                     "ELD",
 //                     "--root_dir",
-//                     "/home/kunyi/Projects/PMN/data/ELD",
+//                     "/home/kunyi/projects/PMN/data/ELD",
 //                     "--mode",
 //                     "SonyA7S2"
 //                 ],
-//             "program": "/home/kunyi/Projects/PMN/get_dataset_infos.py",
+//             "program": "/home/kunyi/projects/PMN/get_dataset_infos.py",
 //             "console": "integratedTerminal",
-//             "cwd": "/home/kunyi/Projects/PMN",   // Current Working Directory(cwd)
+//             "cwd": "/home/kunyi/projects/PMN",   // Current Working Directory(cwd)
 //             "justMyCode": true
 //         }
 //     ]
@@ -34,18 +34,18 @@
 //     "configurations": [
 //         {
 //             "name": "Python: Debug SID Parser",
-//             "type": "python",
+//             "type": "debugpy",
 //             "request": "launch",
 //             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
 //             "args": [
 //                     "--dstname",
 //                     "SID",
 //                     "--root_dir",
-//                     "/home/kunyi/Projects/PMN/data/SID/Sony",
+//                     "/home/kunyi/projects/PMN/data/SID/Sony",
 //                     "--mode",
 //                     "evaltest"
 //                 ],
-//             "program": "/home/kunyi/Projects/PMN/get_dataset_infos.py",
+//             "program": "/home/kunyi/projects/PMN/get_dataset_infos.py",
 //             "console": "integratedTerminal",
 //             "cwd": "/home/kunyi/Projects/PMN",   // Current Working Directory(cwd)
 //             "justMyCode": true
@@ -60,20 +60,20 @@
 //     "configurations": [
 //         {
 //             "name": "Python: Debug Data Parser",
-//             "type": "python",
+//             "type": "debugpy",
 //             "request": "launch",
 //             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
 //             "args": [
 //                     "--dstname",
 //                     "SID",
 //                     "--root_dir",
-//                     "/home/kunyi/Projects/PMN/data/SID/Sony",
+//                     "/home/kunyi/projects/PMN/data/SID/Sony",
 //                     "--mode",
 //                     "train"
 //                 ],
-//             "program": "/home/kunyi/Projects/PMN/get_dataset_infos.py",
+//             "program": "/home/kunyi/projects/PMN/get_dataset_infos.py",
 //             "console": "integratedTerminal",
-//             "cwd": "/home/kunyi/Projects/PMN",   // Current Working Directory(cwd)
+//             "cwd": "/home/kunyi/projects/PMN",   // Current Working Directory(cwd)
 //             "justMyCode": true
 //         }
 //     ]
@@ -94,17 +94,17 @@
             "type": "debugpy",
             "request": "launch",
             "python": "/home/kunyi/anaconda3/envs/PMN/bin/python",
-            "program": "/home/kunyi/Projects/PMN/trainer_SID.py",
+            "program": "/home/kunyi/projects/PMN/trainer_SID.py",
             "args": [
                 "-f",
-                "/home/kunyi/Projects/PMN/runfiles/Ours.yml",
+                "/home/kunyi/projects/PMN/runfiles/Ours.yml",
                 "--mode",
                 "test",
                 "--save_plot",
                 "False"
             ],
             "console": "integratedTerminal",
-            "cwd": "/home/kunyi/Projects/PMN"
+            "cwd": "/home/kunyi/projects/PMN"
         }
     ]
 }
