@@ -6,5 +6,5 @@ images/*
 saved_model/*
 logs/*
 data/*
-checkpoints/*
-resources/*
+checkpoints/
+resources/
