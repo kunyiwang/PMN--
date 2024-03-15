@@ -528,11 +528,6 @@ def rows2bayer(rows):
 def dataload(path):
     suffix = path[-4:].lower()
     if suffix in ['.arw','.dng']:
-        # try:
-        #     data = rawpy.imread(path).raw_image_visible
-        # except Exception as e:
-        #     print(path)
-        #     print(e)
         data = rawpy.imread(path).raw_image_visible
     elif suffix in ['.npy']:
         data = np.load(path)
