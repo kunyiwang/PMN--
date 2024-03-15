@@ -89,6 +89,7 @@ class SID_Trainer(Base_Trainer):
         self.dst = self.args[f'dst_{mode}']
         self.dstname = self.dst['dstname']
         self.dst_eval = globals()[self.dst['dataset']](self.dst)
+        self.args['num_workers'] = 0 # test
         self.dataloader_eval = DataLoader(self.dst_eval, batch_size=1, shuffle=False, 
                                     num_workers=self.args['num_workers'], pin_memory=False)
         self.cache_dir = f'/data/cache/{self.dstname}'

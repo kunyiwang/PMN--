@@ -47,7 +47,7 @@
 //                 ],
 //             "program": "/home/kunyi/projects/PMN/get_dataset_infos.py",
 //             "console": "integratedTerminal",
-//             "cwd": "/home/kunyi/Projects/PMN",   // Current Working Directory(cwd)
+//             "cwd": "/home/kunyi/projects/PMN",   // Current Working Directory(cwd)
 //             "justMyCode": true
 //         }
 //     ]
